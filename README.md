@@ -16,10 +16,10 @@ settings.py
     RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 
     DOWNLOADER_MIDDLEWARES = {
-        'scrapy.contrib.downloadermiddleware.retry.RetryMiddleware': 90,
+        'scrapy.contrib.downloadermiddleware.retry.RetryMiddleware': 300,
         # Fix path to this module
-        'yourspider.randomproxy.RandomProxy': 100,
-        'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
+        'yourspider.randomproxy.RandomProxy': 200,
+        'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 400,
     }
 
     # Proxy list containing entries like
